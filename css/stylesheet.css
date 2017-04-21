@@ -1,0 +1,16 @@
+/* Fitting Video inside div and responsiveness */
+.container_video,
+.container_subtitles {
+    margin: 0 auto;
+    max-width:730px;
+}
+
+.container_subtitles {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#mainVideo {
+    width:100%;
+    height:auto;
+}
