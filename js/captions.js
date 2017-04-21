@@ -1,7 +1,7 @@
 // define video and captions
-const mainVideo = document.getElementById('mainVideo');
-const capContainer = document.getElementById('container_captions');
-const captions = document.querySelectorAll('span');
+var mainVideo = document.getElementById('mainVideo');
+var capContainer = document.getElementById('container_captions');
+var captions = document.querySelectorAll('span');
 
 // Skip to clicked captions
 capContainer.addEventListener('click', (event) => {
@@ -16,7 +16,7 @@ $('#mainVideo').on('timeupdate', () => {
         let cTime = mainVideo.currentTime
         let start = captions[i].getAttribute('cap_start');
         let end = captions[i].getAttribute('cap_end');
-        if(cTime > start && cTime <     end) {
+        if(cTime > start && cTime < end) {
             console.log(captions[i].getAttribute('cap_start'));
             captions[i].className = 'highlight';
         } else {
