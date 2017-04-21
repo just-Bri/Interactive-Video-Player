@@ -1,8 +1,7 @@
 // define video and captions
 const mainVideo = document.getElementById('mainVideo');
-const cTime = mainVideo.currentTime
 const capContainer = document.getElementById('container_captions');
-const captions = document.querySelectorAll('p span');
+const captions = document.querySelectorAll('span');
 
 // Skip to clicked captions
 capContainer.addEventListener('click', (event) => {
@@ -11,11 +10,17 @@ capContainer.addEventListener('click', (event) => {
   }
 });
 
-
-if (cTime > cap_start || cTime < cap_end) {
-
-}
-
-//if mainVideo.currentTime > cap_start && mainVideo.currentTime < cap_end {
-//    highlight span
-//}
+// Highlight Listener
+$('#mainVideo').on('timeupdate', () => {
+    for(let i = 0; i < captions.length; ++i) {
+        let cTime = mainVideo.currentTime
+        let start = captions[i].getAttribute('cap_start');
+        let end = captions[i].getAttribute('cap_end');
+        if(cTime > start && cTime <     end) {
+            console.log(captions[i].getAttribute('cap_start'));
+            captions[i].className = 'highlight';
+        } else {
+            captions[i].className = "";
+        }
+    }
+});
