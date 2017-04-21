@@ -17,7 +17,6 @@ $('#mainVideo').on('timeupdate', () => {
         let start = captions[i].getAttribute('cap_start');
         let end = captions[i].getAttribute('cap_end');
         if(cTime > start && cTime < end) {
-            console.log(captions[i].getAttribute('cap_start'));
             captions[i].className = 'highlight';
         } else {
             captions[i].className = "";

@@ -1,8 +1,16 @@
+span {
+    font-family: 'Fjalla One', sans-serif;
+}
+
 /* Fitting Video inside div and responsiveness */
-.container_video,
-.container_subtitles {
+.container_video {
     margin: 0 auto;
     max-width:730px;
+}
+
+#container_captions {
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 #mainVideo {
@@ -10,13 +18,14 @@
     height:auto;
 }
 
-/* captions styling */
-.container_captions p {
-    margin: 0 auto;
-    max-width: 700px;
-}
-
 /* Highlight */
 .highlight {
     color: darkorange;
+}
+
+@media screen and (min-width: 768px) {
+    #container_captions {
+        max-width: 700px;
+        margin: 0 auto;
+    }
 }
