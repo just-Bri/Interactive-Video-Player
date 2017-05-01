@@ -8,6 +8,10 @@ span {
     max-width:730px;
 }
 
+.mejs__player .mejs__controls {
+    color: darkorange;
+}
+
 #container_captions {
     padding-left: 25px;
     padding-right: 25px;
@@ -29,3 +33,4 @@ span {
         margin: 0 auto;
     }
 }
+
